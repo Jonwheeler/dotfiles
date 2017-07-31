@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/Jon/code/experiments/react/react_tut/public'
+let g:netrw_dirhist_2='/Users/Jon/code/experiments/react/react_tut/public/src'
+let g:netrw_dirhist_3='/Users/Jon/code/experiments/react/react_tut'
+let g:netrw_dirhist_4='/Users/Jon/code/experiments/react/react_tut/public'
+let g:netrw_dirhist_5='/Users/Jon/code/experiments/react/react_tut/public/src'
+let g:netrw_dirhist_6='/Users/Jon/code/doejo/ethos/ethos-rails/app/models'
+let g:netrw_dirhist_7='/Users/Jon/code/doejo/ethos/ethos-rails/db/migrate'

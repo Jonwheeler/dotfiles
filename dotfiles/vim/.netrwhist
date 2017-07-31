@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/Jon/code/php/lincoln-commons/website/config/deploy'
+let g:netrw_dirhist_2='/Users/Jon/code/php/lincoln-commons/website/config'
+let g:netrw_dirhist_3='/Users/Jon/.homestead'
+let g:netrw_dirhist_4='/Users/Jon/code/doejo/rails-starter/config'
+let g:netrw_dirhist_5='/Users/Jon/code/doejo/specialityfoodpackers/packers'
+let g:netrw_dirhist_6='/Users/Jon/code/doejo/specialityfoodpackers'
+let g:netrw_dirhist_7='/Users/Jon/code/laurel-road/interview-test/problem3'
+let g:netrw_dirhist_8='/Users/Jon/.aws'

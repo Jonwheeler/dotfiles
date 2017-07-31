@@ -1,0 +1,29 @@
+dotfiles:
+  - bash_profile
+  - gemrc
+  - gitconfig
+  - gitignore
+  - vim
+  - vimrc
+
+binfiles:
+  - addr
+  - genpassword
+  - dmg
+  - gem-version
+  - ramfs
+  - makessl
+  - docker-clean
+  - pg_url_dump
+  - pg_url_load
+  - dummy-commit
+  - github-downloads
+  - showenv
+  - ipinfo
+  - killspring
+  - git/git-prune-all
+  - git/git-tarball
+  - git/git-track
+  - git/git-branches
+  - git/git-clean-merged
+  - git/git-churn

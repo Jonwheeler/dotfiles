@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+class String
+  def red    ; colorize(self, "\e[1m\e[31m") ; end
+  def green  ; colorize(self, "\e[1m\e[32m") ; end
+  def yellow ; colorize(self, "\e[1m\e[33m") ; end
+
+  def colorize(text, color_code)
+    "#{color_code}#{text}\e[0m"
+  end
+end
+
+def diff(num, word)
+  color = case num
+  when 0..10
+    :green
+  when 10..25
+    :yellow
+  else
+    :red
+  end
+
+  "#{num} #{word}".send(color)
+end
+
+unless File.exists?("#{Dir.pwd}/.git")
+  puts "Not a git repo"
+  exit
+end
+
+current = `git rev-parse --abbrev-ref HEAD`.strip
+all     = `git branch --list --no-color`.strip.split("\n").reject { |n| n =~ /^\*/ }.map(&:strip)
+
+if all.empty?
+  puts "Nothing to compare..."
+  exit
+end
+
+pad = all.sort { |a,b| b.size <=> a.size }.first.size
+
+puts
+all.each do |name|
+  behind = `git rev-list #{name}..#{current}`.strip.split("\n").size
+  ahead  = `git rev-list #{current}..#{name}`.strip.split("\n").size
+  puts "#{name.rjust(pad)} - #{diff(behind, "behind")}, #{diff(ahead, "ahead")}"
+end
+puts

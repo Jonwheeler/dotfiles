@@ -1,0 +1,23 @@
+#!/bin/sh
+# Usage: git tarball HEAD
+
+if [ -z "$1" ]
+then
+  rev="HEAD"
+else
+  rev=$1
+fi
+
+wd=$(pwd)
+basepath=$(basename $wd)
+desc=$(git describe --always "$rev")
+prefix="$basepath-$desc"
+file="$prefix.tar.gz"
+
+if [ -f $file ]
+then
+  echo "File already exists, its going to be overwritten"
+fi
+
+echo "Creating archive: $file"
+git archive --format=tar --prefix="$prefix/" "$rev" | gzip > "$file"
